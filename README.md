@@ -1,18 +1,2 @@
 # Appy-cakes
 Human ran AI Agent.
-name: Firebase
-on:
-  push:
-    branches:
-    - master
-jobs:
-  main:
-    name: Deploy
-    runs-on: ubuntu-latest
-    steps:
-    - name: Check out code
-      uses: actions/checkout@main
-    - name: Deploy to Firebase
-      uses: ivoilic/deploy-firebase-functions-storage-firestore@v1.0
-      env:
-        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
